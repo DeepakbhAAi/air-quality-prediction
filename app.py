@@ -24,3 +24,6 @@ if st.button("Predict AQI"):
     features = np.array([[city_encoded, pm25, pm10, no2, co, o3]])
     predicted_aqi = model.predict(features)[0]
     st.success(f"🌍 Predicted AQI for {city}: **{round(predicted_aqi, 2)}**")
+st.markdown("### AQI Category Chart")
+st.image("aqi_chart.webp", caption="AQI categories and pollutant concentration ranges", use_column_width=True)
+
